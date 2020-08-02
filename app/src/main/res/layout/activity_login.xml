@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#403F3F">
+
+
+<!--
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:title="@string/login"/>
+-->
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d16dp"
+        android:layout_marginEnd="@dimen/d16dp"
+        android:layout_centerInParent="true"
+        android:elevation="@dimen/d8dp"
+        app:cardCornerRadius="@dimen/d8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/d64dp"
+                android:background="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:hint="@string/email"
+                    android:layout_marginTop="@dimen/d64dp"
+                    android:layout_marginStart="@dimen/d16dp"
+                    android:layout_marginEnd="@dimen/d16dp"
+                    android:layout_marginBottom="@dimen/d16dp">
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:hint="@string/password"
+                    app:passwordToggleEnabled="true"
+                    android:layout_below="@id/til_email"
+                    android:layout_margin="@dimen/d16dp">
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    android:layout_margin="@dimen/d16dp"
+                    android:layout_below="@id/til_password"
+                    android:layout_centerHorizontal="true"/>
+
+                <ProgressBar
+                    android:id="@+id/pb_loading"
+                    android:layout_width="@dimen/d32dp"
+                    android:layout_height="@dimen/d32dp"
+                    android:indeterminate="true"
+                    android:layout_margin="@dimen/d16dp"
+                    android:layout_below="@id/til_password"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_logo"
+                android:layout_width="@dimen/d64dp"
+                android:layout_height="@dimen/d64dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/d32dp"
+                android:src="@drawable/hk_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HackerKernel"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="@dimen/d16dp"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

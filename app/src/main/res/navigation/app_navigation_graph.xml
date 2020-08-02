@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation_graph"
+    app:startDestination="@id/bottomNavHomeFragment">
+
+    <fragment
+        android:id="@+id/bottomNavHomeFragment"
+        android:name="com.hackerkernel.androidtask.ui.fragment.BottomNavHomeFragment"
+        tools:layout="@layout/fragment_bottom_nav_home" >
+        <action
+            android:id="@+id/action_bottomNavHomeFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
+        <action
+            android:id="@+id/action_bottomNavHomeFragment_to_dashboardActivity"
+            app:destination="@id/dashboardActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.hackerkernel.androidtask.ui.activity.LoginActivity"
+        android:label="LoginActivity" />
+    <activity
+        android:id="@+id/dashboardActivity"
+        android:name="com.hackerkernel.androidtask.ui.activity.DashboardActivity"
+        android:label="activity_dashboard"
+        tools:layout="@layout/activity_dashboard" />
+</navigation>

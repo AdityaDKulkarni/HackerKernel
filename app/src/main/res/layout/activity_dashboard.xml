@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@color/colorPrimaryDark"
+        app:title="@string/home">
+
+        <ImageView
+            android:id="@+id/img_user_icon"
+            android:layout_width="@dimen/d24dp"
+            android:layout_height="@dimen/d24dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_user"
+            android:layout_marginStart="@dimen/d8dp"
+            android:layout_marginEnd="@dimen/d8dp"/>
+
+        <ImageButton
+            android:layout_width="@dimen/d24dp"
+            android:layout_height="@dimen/d24dp"
+            android:background="@null"
+            android:src="@drawable/ic_search"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/d4dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_above="@id/bn_dashboard"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_featured_articles"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d350dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_featured_articles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/featured_articles"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/d16dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:scrollbarSize="@dimen/s24sp"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_featured_articles"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/d8dp"
+                    android:layout_weight="2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_featured_videos"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d250dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_featured_videos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/featured_videos"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/d16dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:scrollbarSize="@dimen/s24sp"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_featured_videos"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/d8dp"
+                    android:layout_weight="2"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bn_dashboard"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/dashboard_bottom_menu"/>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/d175dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/d8dp"
+    app:cardCornerRadius="@dimen/d8dp"
+    android:layout_margin="@dimen/d8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_thumbnail"
+            android:layout_width="@dimen/d175dp"
+            android:layout_height="@dimen/d200dp"
+            android:scaleType="fitXY"/>
+
+
+        <TextView
+            android:id="@+id/tv_photo_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/s16sp"
+            android:layout_below="@id/img_thumbnail"
+            android:textColor="@color/colorPrimaryDark"
+            android:maxLines="3"
+            android:padding="@dimen/d4dp"
+            android:ellipsize="end"/>
+
+        <ProgressBar
+            android:id="@+id/pb_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d16dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimary"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

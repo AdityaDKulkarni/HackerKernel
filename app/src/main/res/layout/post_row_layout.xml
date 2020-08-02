@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/d8dp"
+    app:cardCornerRadius="@dimen/d8dp"
+    android:layout_margin="@dimen/d8dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="@dimen/d2dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_margin="@dimen/d8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d8dp">
+
+        <TextView
+            android:id="@+id/tv_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="@dimen/s16sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/d8dp"/>
+
+        <TextView
+            android:id="@+id/tv_post_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="@dimen/s16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/tv_post_title"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginStart="@dimen/d8dp"
+            android:layout_marginEnd="@dimen/d8dp"
+            android:layout_marginBottom="@dimen/d8dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
